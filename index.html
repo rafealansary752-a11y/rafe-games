@@ -5,37 +5,33 @@
     <title>مكتبة راف الاحترافية</title>
     <style>
         body { background: #0f172a; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
-        #searchInput { width: 90%; max-width: 400px; padding: 12px; margin: 20px auto; border-radius: 15px; border: none; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-        .card { background: #1e293b; padding: 15px; border-radius: 10px; transition: 0.3s; }
-        .card:hover { transform: scale(1.05); }
+        #searchInput { width: 90%; max-width: 400px; padding: 15px; margin: 20px auto; border-radius: 15px; border: none; text-align: center; font-size: 18px; outline: none; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; padding: 20px; }
+        .card { background: #1e293b; padding: 20px; border-radius: 12px; transition: 0.2s; cursor: pointer; border: 1px solid #334155; }
+        .card:hover { transform: scale(1.03); background: #334155; }
     </style>
 </head>
 <body>
     <h1>🎮 مكتبة راف الاحترافية</h1>
-    <input type="text" id="searchInput" placeholder="ابحث عن اسم اللعبة...">
-    
-    <div class="grid" id="gameGrid">
-        <!-- أضف ألعابك هنا (كل لعبة في سطر card) -->
-        <div class="card"><h3>GTA V</h3></div>
-        <div class="card"><h3>Fortnite</h3></div>
-        <div class="card"><h3>Minecraft</h3></div>
-        <div class="card"><h3>Batman Arkham Knight</h3></div>
-        <div class="card"><h3>Red Dead Redemption 2</h3></div>
-        <div class="card"><h3>Valorant</h3></div>
-        <div class="card"><h3>Elden Ring</h3></div>
-        <div class="card"><h3>Cyberpunk 2077</h3></div>
-    </div>
+    <input type="text" id="searchInput" placeholder="ابحث عن لعبتك هنا...">
+    <div class="grid" id="gameGrid"></div>
 
     <script>
-        // كود البحث
-        const searchInput = document.getElementById('searchInput');
-        searchInput.addEventListener('input', () => {
-            const filter = searchInput.value.toLowerCase();
-            document.querySelectorAll('.card').forEach(card => {
-                card.style.display = card.textContent.toLowerCase().includes(filter) ? "" : "none";
+        const games = ["GTA V", "Fortnite", "Minecraft", "Batman Arkham Knight", "Red Dead Redemption 2", "Valorant", "Elden Ring", "Cyberpunk 2077", "God of War", "Spider-Man Remastered", "The Witcher 3", "Call of Duty", "Rocket League", "Among Us", "Fall Guys", "Assassin's Creed", "Far Cry 6", "Forza Horizon 5", "FIFA 24", "Tekken 8", "Mortal Kombat 1", "Counter-Strike 2", "Dota 2", "PUBG", "Apex Legends", "Baldur's Gate 3", "Rust", "Team Fortress 2", "Terraria", "Stardew Valley", "Rainbow Six Siege", "Warframe", "Destiny 2", "Left 4 Dead 2", "Skyrim", "Fallout 4", "Garry's Mod", "Portal 2", "Half-Life 2", "Monster Hunter: World", "Phasmophobia", "Dead by Daylight", "Valheim", "Hollow Knight", "DayZ", "ARK: Survival Evolved", "No Man's Sky", "Sea of Thieves", "Cities: Skylines", "Factorio", "RimWorld", "Satisfactory", "Among Us", "Fall Guys", "Rocket League", "Euro Truck Simulator 2", "American Truck Simulator", "Hearts of Iron IV", "Europa Universalis IV", "Stellaris", "Civilization VI", "Total War: Warhammer III", "Bannerlord", "Forza Horizon 5", "Assetto Corsa", "BeamNG.drive", "Subnautica", "The Forest", "Sons of the Forest", "Dishonored", "Bioshock Infinite", "Mass Effect", "Dragon Age", "Borderlands 3", "Doom Eternal", "Sekiro", "Dark Souls III", "Nier: Automata", "Control", "Death Stranding", "Resident Evil Village", "Devil May Cry 5", "Hades", "Dead Cells", "Celeste", "Cuphead", "Undertale", "Outer Wilds", "Disco Elysium", "Stray", "It Takes Two", "Overcooked! 2", "Portal", "Half-Life: Alyx", "Black Mesa", "F1 23", "NBA 2K24", "WWE 2K23", "Street Fighter 6", "Injustice 2", "Batman: Arkham City", "Batman: Arkham Asylum", "Middle-earth: Shadow of Mordor", "Mad Max", "Sleeping Dogs", "Yakuza: Like a Dragon", "Persona 5 Royal", "Final Fantasy XV", "Tales of Arise", "Scarlet Nexus", "Code Vein", "Grim Dawn", "Torchlight II", "Titan Quest", "Path of Exile", "Lost Ark", "Naraka: Bladepoint", "Hunt: Showdown", "Escape from Tarkov", "Squad", "Hell Let Loose", "Post Scriptum", "Rising Storm 2: Vietnam", "Insurgency: Sandstorm", "World War Z", "Back 4 Blood", "Deep Rock Galactic", "Killing Floor 2", "Payday 2", "Payday 3", "Phantasy Star Online 2", "War Thunder", "World of Tanks", "World of Warships", "Star Citizen", "Elite Dangerous", "X4: Foundations", "Kerbal Space Program", "Space Engineers", "Teardown", "Besiege", "Poly Bridge", "Human Fall Flat", "Gang Beasts", "Totally Accurate Battle Simulator", "Superhot", "Hotline Miami", "Katana ZERO", "My Friend Pedro", "Ghostrunner", "Metal Gear Solid V", "Hitman 3", "Watch Dogs 2", "Far Cry 5", "Assassin's Creed Odyssey", "Assassin's Creed Origins", "Ghost Recon Wildlands", "Tom Clancy's The Division 2", "Just Cause 4", "Saints Row IV", "Mafia: Definitive Edition", "L.A. Noire", "Max Payne 3", "Alan Wake 2", "Quantum Break", "Ghostwire: Tokyo", "Deathloop", "Prey", "Dishonored 2", "Wolfenstein II", "DOOM (2016)", "Quake Champions", "Unreal Tournament", "Serious Sam 4", "Painkiller", "Shadow Warrior 3", "Bulletstorm", "Dying Light", "Dying Light 2", "Dead Island 2", "Days Gone", "State of Decay 2", "Project Zomboid", "7 Days to Die", "Green Hell", "Stranded Deep", "Raft", "The Long Dark", "Firewatch", "What Remains of Edith Finch", "Gone Home", "Tacoma", "Return of the Obra Dinn", "Baba Is You", "Slay the Spire", "Inscryption"];
+
+        const grid = document.getElementById('gameGrid');
+        function renderGames(filter = "") {
+            grid.innerHTML = "";
+            games.filter(g => g.toLowerCase().includes(filter.toLowerCase())).forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `<h3>${game}</h3>`;
+                grid.appendChild(card);
             });
-        });
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => renderGames(e.target.value));
+        renderGames(); // تشغيل القائمة عند فتح الصفحة
     </script>
 </body>
 </html>
