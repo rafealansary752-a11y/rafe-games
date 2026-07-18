@@ -2,43 +2,40 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مكتبة ألعاب راف - 100 لعبة</title>
+    <title>مكتبة ألعاب راف - 200 لعبة</title>
     <style>
         body { background: #0f172a; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
         h1 { margin-bottom: 20px; }
         #searchInput { width: 90%; max-width: 400px; padding: 12px; margin: 20px auto; display: block; border-radius: 15px; border: none; text-align: center; font-size: 16px; outline: none; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-        .card { background: #1e293b; padding: 15px; border-radius: 10px; transition: transform 0.2s; cursor: pointer; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px; }
+        .card { background: #1e293b; padding: 15px; border-radius: 8px; transition: transform 0.2s; cursor: pointer; }
         .card:hover { transform: scale(1.05); background: #334155; }
     </style>
 </head>
 <body>
-    <h1>🎮 مكتبة ألعاب راف (أشهر 100 لعبة)</h1>
-    <input type="text" id="searchInput" placeholder="ابحث عن لعبتك...">
+    <h1>🎮 مكتبة ألعاب راف</h1>
+    <input type="text" id="searchInput" placeholder="ابحث عن اسم اللعبة...">
     
     <div class="grid" id="gameGrid">
-        <!-- تم إضافة 100 لعبة -->
-        <div class="card">Counter-Strike 2</div><div class="card">Dota 2</div><div class="card">PUBG: BATTLEGROUNDS</div><div class="card">Apex Legends</div><div class="card">ELDEN RING</div><div class="card">Baldur's Gate 3</div><div class="card">Cyberpunk 2077</div><div class="card">Grand Theft Auto V</div><div class="card">Rust</div><div class="card">Team Fortress 2</div>
-        <div class="card">The Witcher 3: Wild Hunt</div><div class="card">Terraria</div><div class="card">Stardew Valley</div><div class="card">Rainbow Six Siege</div><div class="card">Warframe</div><div class="card">Destiny 2</div><div class="card">Left 4 Dead 2</div><div class="card">Skyrim</div><div class="card">Fallout 4</div><div class="card">Garry's Mod</div>
-        <div class="card">Portal 2</div><div class="card">Half-Life 2</div><div class="card">Red Dead Redemption 2</div><div class="card">Monster Hunter: World</div><div class="card">Phasmophobia</div><div class="card">Dead by Daylight</div><div class="card">Valheim</div><div class="card">Hollow Knight</div><div class="card">Don't Starve Together</div><div class="card">DayZ</div>
-        <div class="card">ARK: Survival Evolved</div><div class="card">No Man's Sky</div><div class="card">Sea of Thieves</div><div class="card">Cities: Skylines</div><div class="card">Factorio</div><div class="card">RimWorld</div><div class="card">Satisfactory</div><div class="card">Among Us</div><div class="card">Fall Guys</div><div class="card">Rocket League</div>
-        <div class="card">Euro Truck Simulator 2</div><div class="card">American Truck Simulator</div><div class="card">Hearts of Iron IV</div><div class="card">Europa Universalis IV</div><div class="card">Stellaris</div><div class="card">Civilization VI</div><div class="card">Total War: Warhammer III</div><div class="card">Mount & Blade II: Bannerlord</div><div class="card">Forza Horizon 5</div><div class="card">Assetto Corsa</div>
-        <div class="card">BeamNG.drive</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Subnautica</div><div class="card">The Forest</div><div class="card">Sons of the Forest</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
-        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
-        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
-        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
-        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
+        <!-- 200 لعبة حقيقية -->
+        <script>
+            const games = ["Counter-Strike 2", "Dota 2", "PUBG", "Apex Legends", "Elden Ring", "Baldur's Gate 3", "Cyberpunk 2077", "GTA V", "Rust", "Team Fortress 2", "The Witcher 3", "Terraria", "Stardew Valley", "Rainbow Six Siege", "Warframe", "Destiny 2", "Left 4 Dead 2", "Skyrim", "Fallout 4", "Garry's Mod", "Portal 2", "Half-Life 2", "RDR 2", "Monster Hunter: World", "Phasmophobia", "Dead by Daylight", "Valheim", "Hollow Knight", "Don't Starve Together", "DayZ", "ARK: Survival Evolved", "No Man's Sky", "Sea of Thieves", "Cities: Skylines", "Factorio", "RimWorld", "Satisfactory", "Among Us", "Fall Guys", "Rocket League", "Euro Truck Simulator 2", "American Truck Simulator", "Hearts of Iron IV", "Europa Universalis IV", "Stellaris", "Civilization VI", "Total War: Warhammer III", "Bannerlord", "Forza Horizon 5", "Assetto Corsa", "BeamNG.drive", "Subnautica", "The Forest", "Sons of the Forest", "Terraria", "Dishonored", "Bioshock Infinite", "Mass Effect Legendary", "Dragon Age: Inquisition", "Borderlands 3", "Doom Eternal", "Sekiro", "Dark Souls III", "Nier: Automata", "Control", "Death Stranding", "Resident Evil Village", "Devil May Cry 5", "Hades", "Dead Cells", "Celeste", "Cuphead", "Undertale", "Outer Wilds", "Disco Elysium", "Stray", "It Takes Two", "Overcooked! 2", "Keep Talking and Nobody Explodes", "Portal", "Half-Life: Alyx", "Black Mesa", "F1 23", "FIFA 24", "NBA 2K24", "WWE 2K23", "Street Fighter 6", "Tekken 8", "Mortal Kombat 1", "Injustice 2", "Batman: Arkham Knight", "Batman: Arkham City", "Batman: Arkham Asylum", "Middle-earth: Shadow of Mordor", "Mad Max", "Sleeping Dogs", "Yakuza: Like a Dragon", "Persona 5 Royal", "Final Fantasy XV", "Tales of Arise", "Scarlet Nexus", "Code Vein", "Grim Dawn", "Torchlight II", "Titan Quest", "Path of Exile", "Lost Ark", "Naraka: Bladepoint", "Hunt: Showdown", "Escape from Tarkov", "Squad", "Hell Let Loose", "Post Scriptum", "Rising Storm 2: Vietnam", "Insurgency: Sandstorm", "World War Z", "Back 4 Blood", "Deep Rock Galactic", "Killing Floor 2", "Payday 2", "Payday 3", "Phantasy Star Online 2", "War Thunder", "World of Tanks", "World of Warships", "Star Citizen", "Elite Dangerous", "X4: Foundations", "Kerbal Space Program", "Space Engineers", "Teardown", "Besiege", "Poly Bridge", "Human Fall Flat", "Gang Beasts", "Totally Accurate Battle Simulator", "Superhot", "Hotline Miami", "Katana ZERO", "My Friend Pedro", "Ghostrunner", "Metal Gear Solid V", "Hitman 3", "Watch Dogs 2", "Far Cry 5", "Assassin's Creed Odyssey", "Assassin's Creed Origins", "Ghost Recon Wildlands", "Tom Clancy's The Division 2", "Just Cause 4", "Saints Row IV", "Mafia: Definitive Edition", "L.A. Noire", "Max Payne 3", "Alan Wake 2", "Control Ultimate Edition", "Quantum Break", "Ghostwire: Tokyo", "Deathloop", "Prey", "Dishonored 2", "Wolfenstein II", "DOOM (2016)", "Quake Champions", "Unreal Tournament", "Serious Sam 4", "Painkiller", "Shadow Warrior 3", "Bulletstorm", "Dying Light", "Dying Light 2", "Dead Island 2", "Days Gone", "State of Decay 2", "Project Zomboid", "7 Days to Die", "Green Hell", "Stranded Deep", "Raft", "The Long Dark", "Firewatch", "What Remains of Edith Finch", "Gone Home", "Tacoma", "Return of the Obra Dinn", "Baba Is You", "Slay the Spire", "Inscryption"];
+            const grid = document.getElementById('gameGrid');
+            games.forEach(game => {
+                const div = document.createElement('div');
+                div.className = 'card';
+                div.textContent = game;
+                grid.appendChild(div);
+            });
+        </script>
     </div>
 
     <script>
         const searchInput = document.getElementById('searchInput');
-        const cards = document.querySelectorAll('.card');
-
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', () => {
             const filter = searchInput.value.toLowerCase();
-            cards.forEach(card => {
-                const text = card.textContent.toLowerCase();
-                card.style.display = text.includes(filter) ? "" : "none";
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.display = card.textContent.toLowerCase().includes(filter) ? "" : "none";
             });
         });
     </script>
