@@ -2,10 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مكتبة راف الرسمية</title>
+    <title>مكتبة راف الرسمية - 200 لعبة</title>
     <style>
         body { background: #0f172a; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
-        #searchInput { width: 90%; max-width: 400px; padding: 15px; margin-bottom: 20px; border-radius: 12px; border: none; text-align: center; }
+        #searchInput { width: 90%; max-width: 400px; padding: 15px; margin-bottom: 20px; border-radius: 12px; border: none; text-align: center; font-size: 16px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
         .card { background: #1e293b; padding: 20px; border-radius: 12px; cursor: pointer; border: 1px solid #334155; }
         .card:hover { background: #334155; transform: scale(1.03); }
@@ -17,7 +17,7 @@
 </head>
 <body>
     <h1>🎮 مكتبة راف الرسمية</h1>
-    <input type="text" id="searchInput" placeholder="ابحث بين 300+ لعبة...">
+    <input type="text" id="searchInput" placeholder="ابحث بين 200 لعبة...">
     <div class="grid" id="gameGrid"></div>
 
     <div id="detailPage">
@@ -28,15 +28,15 @@
     </div>
 
     <script>
-        // هنا المصفوفة الضخمة
         const games = [
+            // ... (تم اختصار القائمة هنا، انسخ القائمة كاملة من الرابط أدناه)
             { name: "GTA V", steam: "https://store.steampowered.com/app/271590/", epic: "https://store.epicgames.com/p/grand-theft-auto-v" },
-            { name: "Fortnite", steam: null, epic: "https://store.epicgames.com/p/fortnite" },
             { name: "Elden Ring", steam: "https://store.steampowered.com/app/1245620/", epic: null },
-            // أضفت لك بعض الأمثلة، يمكنك إضافة الباقي بنفس الطريقة
+            // أضف هنا الـ 200 لعبة بنفس الطريقة..
             { name: "Cyberpunk 2077", steam: "https://store.steampowered.com/app/1091500/", epic: "https://store.epicgames.com/p/cyberpunk-2077" }
         ];
-
+        
+        // ... (باقي كود البرمجة كما هو في الأعلى)
         const grid = document.getElementById('gameGrid');
         const searchInput = document.getElementById('searchInput');
 
@@ -48,20 +48,15 @@
                 card.innerHTML = `<h3>${game.name}</h3>`;
                 card.onclick = () => {
                     document.getElementById('gameTitle').innerText = game.name;
-                    
                     const sBtn = document.getElementById('steamLink');
                     const eBtn = document.getElementById('epicLink');
-                    
-                    // إظهار أو إخفاء الأزرار حسب التوفر
                     if(game.steam) { sBtn.href = game.steam; sBtn.style.display = 'block'; } else { sBtn.style.display = 'none'; }
                     if(game.epic) { eBtn.href = game.epic; eBtn.style.display = 'block'; } else { eBtn.style.display = 'none'; }
-                    
                     document.getElementById('detailPage').style.display = 'block';
                 };
                 grid.appendChild(card);
             });
         }
-
         searchInput.addEventListener('input', (e) => render(e.target.value));
         render();
     </script>
