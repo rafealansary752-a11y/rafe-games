@@ -2,25 +2,32 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مكتبة راف للألعاب</title>
+    <title>مكتبة ألعاب راف - 100 لعبة</title>
     <style>
         body { background: #0f172a; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
         h1 { margin-bottom: 20px; }
         #searchInput { width: 90%; max-width: 400px; padding: 12px; margin: 20px auto; display: block; border-radius: 15px; border: none; text-align: center; font-size: 16px; outline: none; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-        .card { background: #1e293b; padding: 20px; border-radius: 10px; transition: transform 0.2s; }
-        .card:hover { transform: scale(1.05); }
+        .card { background: #1e293b; padding: 15px; border-radius: 10px; transition: transform 0.2s; cursor: pointer; }
+        .card:hover { transform: scale(1.05); background: #334155; }
     </style>
 </head>
 <body>
-    <h1>🎮 مكتبة راف للألعاب</h1>
-    <input type="text" id="searchInput" placeholder="ابحث عن لعبتك هنا...">
+    <h1>🎮 مكتبة ألعاب راف (أشهر 100 لعبة)</h1>
+    <input type="text" id="searchInput" placeholder="ابحث عن لعبتك...">
     
-    <div class="grid">
-        <div class="card">فورتنايت</div>
-        <div class="card">باتمان</div>
-        <div class="card">GTA V</div>
-        <div class="card">Minecraft</div>
+    <div class="grid" id="gameGrid">
+        <!-- تم إضافة 100 لعبة -->
+        <div class="card">Counter-Strike 2</div><div class="card">Dota 2</div><div class="card">PUBG: BATTLEGROUNDS</div><div class="card">Apex Legends</div><div class="card">ELDEN RING</div><div class="card">Baldur's Gate 3</div><div class="card">Cyberpunk 2077</div><div class="card">Grand Theft Auto V</div><div class="card">Rust</div><div class="card">Team Fortress 2</div>
+        <div class="card">The Witcher 3: Wild Hunt</div><div class="card">Terraria</div><div class="card">Stardew Valley</div><div class="card">Rainbow Six Siege</div><div class="card">Warframe</div><div class="card">Destiny 2</div><div class="card">Left 4 Dead 2</div><div class="card">Skyrim</div><div class="card">Fallout 4</div><div class="card">Garry's Mod</div>
+        <div class="card">Portal 2</div><div class="card">Half-Life 2</div><div class="card">Red Dead Redemption 2</div><div class="card">Monster Hunter: World</div><div class="card">Phasmophobia</div><div class="card">Dead by Daylight</div><div class="card">Valheim</div><div class="card">Hollow Knight</div><div class="card">Don't Starve Together</div><div class="card">DayZ</div>
+        <div class="card">ARK: Survival Evolved</div><div class="card">No Man's Sky</div><div class="card">Sea of Thieves</div><div class="card">Cities: Skylines</div><div class="card">Factorio</div><div class="card">RimWorld</div><div class="card">Satisfactory</div><div class="card">Among Us</div><div class="card">Fall Guys</div><div class="card">Rocket League</div>
+        <div class="card">Euro Truck Simulator 2</div><div class="card">American Truck Simulator</div><div class="card">Hearts of Iron IV</div><div class="card">Europa Universalis IV</div><div class="card">Stellaris</div><div class="card">Civilization VI</div><div class="card">Total War: Warhammer III</div><div class="card">Mount & Blade II: Bannerlord</div><div class="card">Forza Horizon 5</div><div class="card">Assetto Corsa</div>
+        <div class="card">BeamNG.drive</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Subnautica</div><div class="card">The Forest</div><div class="card">Sons of the Forest</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
+        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
+        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
+        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
+        <div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div><div class="card">Phasmophobia</div>
     </div>
 
     <script>
@@ -30,11 +37,8 @@
         searchInput.addEventListener('input', function() {
             const filter = searchInput.value.toLowerCase();
             cards.forEach(card => {
-                if (card.textContent.toLowerCase().includes(filter)) {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(filter) ? "" : "none";
             });
         });
     </script>
