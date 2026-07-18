@@ -19,6 +19,24 @@
     <div class="grid">
         <div class="card">فورتنايت</div>
         <div class="card">باتمان</div>
+        <div class="card">GTA V</div>
+        <div class="card">Minecraft</div>
     </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('input', function() {
+            const filter = searchInput.value.toLowerCase();
+            cards.forEach(card => {
+                if (card.textContent.toLowerCase().includes(filter)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
