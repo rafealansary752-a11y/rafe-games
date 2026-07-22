@@ -2,63 +2,95 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مكتبة راف الرسمية - 200 لعبة</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع RAF للمحاكيات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #0f172a; color: white; text-align: center; font-family: sans-serif; padding: 20px; }
-        #searchInput { width: 90%; max-width: 400px; padding: 15px; margin-bottom: 20px; border-radius: 12px; border: none; text-align: center; font-size: 16px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
-        .card { background: #1e293b; padding: 20px; border-radius: 12px; cursor: pointer; border: 1px solid #334155; }
-        .card:hover { background: #334155; transform: scale(1.03); }
-        #detailPage { display: none; padding: 40px; background: #0f172a; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow-y: auto; }
-        .btn { display: block; width: 250px; margin: 15px auto; padding: 15px; border-radius: 8px; text-decoration: none; color: white; font-weight: bold; }
-        .btn-steam { background: #1b2838; border: 1px solid #66c0f4; }
-        .btn-epic { background: #2a2a2a; border: 1px solid #ffffff; }
+        body { 
+            background-color: #0b0f19; 
+            color: #f3f4f6; 
+            font-family: system-ui, -apple-system, sans-serif;
+        }
     </style>
 </head>
-<body>
-    <h1>🎮 مكتبة راف الرسمية</h1>
-    <input type="text" id="searchInput" placeholder="ابحث بين 200 لعبة...">
-    <div class="grid" id="gameGrid"></div>
+<body class="min-h-screen flex flex-col justify-between p-6">
 
-    <div id="detailPage">
-        <button onclick="document.getElementById('detailPage').style.display='none'" style="padding:10px 20px; cursor:pointer;">⬅️ إغلاق</button>
-        <h1 id="gameTitle"></h1>
-        <a id="steamLink" href="#" class="btn btn-steam" style="display:none" target="_blank">متجر Steam</a>
-        <a id="epicLink" href="#" class="btn btn-epic" style="display:none" target="_blank">متجر Epic Games</a>
-    </div>
+    <!-- الهيدر -->
+    <header class="w-full max-w-4xl mx-auto text-center py-8">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-indigo-400 mb-2">🎮 موقع RAF للمحاكيات</h1>
+        <p class="text-gray-400 text-sm">منصتك الموثوقة لأفضل محاكيات الألعاب • بدون إعلانات نهائياً • تجربة نظيفة وسريعة</p>
+    </header>
 
-    <script>
-        const games = [
-            // ... (تم اختصار القائمة هنا، انسخ القائمة كاملة من الرابط أدناه)
-            { name: "GTA V", steam: "https://store.steampowered.com/app/271590/", epic: "https://store.epicgames.com/p/grand-theft-auto-v" },
-            { name: "Elden Ring", steam: "https://store.steampowered.com/app/1245620/", epic: null },
-            // أضف هنا الـ 200 لعبة بنفس الطريقة..
-            { name: "Cyberpunk 2077", steam: "https://store.steampowered.com/app/1091500/", epic: "https://store.epicgames.com/p/cyberpunk-2077" }
-        ];
+    <!-- المحتوى الرئيسي -->
+    <main class="w-full max-w-4xl mx-auto space-y-6">
         
-        // ... (باقي كود البرمجة كما هو في الأعلى)
-        const grid = document.getElementById('gameGrid');
-        const searchInput = document.getElementById('searchInput');
+        <!-- قسم المحاكيات الكبرى -->
+        <section class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-xl backdrop-blur-md">
+            <h2 class="text-xl font-bold mb-4 text-indigo-300 border-r-4 border-indigo-500 pr-3">🚀 محاكيات الحاسب وأجهزة الجيل الحديث</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Winlator -->
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white">Winlator</h3>
+                        <p class="text-gray-400 text-xs mt-1">لتشغيل ألعاب أجهزة الكمبيوتر (PC) على نظام الأندرويد بكفاءة عالية.</p>
+                    </div>
+                    <a href="https://github.com/brunodev85/winlator/releases" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-sm font-medium transition shadow-md">تحميل الإصدار الأخير (GitHub)</a>
+                </div>
 
-        function render(filter = "") {
-            grid.innerHTML = "";
-            games.filter(g => g.name.toLowerCase().includes(filter.toLowerCase())).forEach(game => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `<h3>${game.name}</h3>`;
-                card.onclick = () => {
-                    document.getElementById('gameTitle').innerText = game.name;
-                    const sBtn = document.getElementById('steamLink');
-                    const eBtn = document.getElementById('epicLink');
-                    if(game.steam) { sBtn.href = game.steam; sBtn.style.display = 'block'; } else { sBtn.style.display = 'none'; }
-                    if(game.epic) { eBtn.href = game.epic; eBtn.style.display = 'block'; } else { eBtn.style.display = 'none'; }
-                    document.getElementById('detailPage').style.display = 'block';
-                };
-                grid.appendChild(card);
-            });
-        }
-        searchInput.addEventListener('input', (e) => render(e.target.value));
-        render();
-    </script>
+                <!-- GameHub -->
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-white">GameHub</h3>
+                        <p class="text-gray-400 text-xs mt-1">منصة متكاملة لتشغيل وإدارة ألعاب المتاجر الشهيرة والمحاكيات.</p>
+                    </div>
+                    <a href="https://github.com/The412Banner/bannerhub/releases" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-sm font-medium transition shadow-md">تحميل الإصدار الأخير (GitHub)</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- قسم محاكيات الكونسول (PlayStation & Nintendo) -->
+        <section class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-xl backdrop-blur-md">
+            <h2 class="text-xl font-bold mb-4 text-indigo-300 border-r-4 border-indigo-500 pr-3">🕹️ محاكيات المنصات الكلاسيكية والمحمولة</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- PPSSPP -->
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-base text-white">PPSSPP (PSP)</h3>
+                        <p class="text-gray-400 text-xs mt-1">أفضل محاكي لتشغيل مكتبة ألعاب بلايستيشن المحمولة PSP بجودة عالية.</p>
+                    </div>
+                    <a href="https://github.com/hrydgard/ppsspp/releases" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-xs font-medium transition">تحميل المحاكي</a>
+                </div>
+
+                <!-- Dolphin -->
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-base text-white">Dolphin (GameCube/Wii)</h3>
+                        <p class="text-gray-400 text-xs mt-1">محاكي نينتندو الشهير لتشغيل ألعاب GameCube و Wii على الجوال.</p>
+                    </div>
+                    <a href="https://github.com/dolphin-emu/dolphin/releases" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-xs font-medium transition">تحميل المحاكي</a>
+                </div>
+
+                <!-- Vita3K -->
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-base text-white">Vita3K (PS Vita)</h3>
+                        <p class="text-gray-400 text-xs mt-1">أول محاكي فعال لتشغيل ألعاب منصة PS Vita الشهيرة على أندرويد.</p>
+                    </div>
+                    <a href="https://github.com/Vita3K/Vita3K-Android/releases" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-xs font-medium transition">تحميل المحاكي</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="text-center text-gray-500 text-xs py-6">
+        صُنع خصيصاً لراحة المستخدمين • موقع RAF للمحاكيات خالي تماماً من الإعلانات 🛡️
+    </footer>
+
 </body>
 </html>
