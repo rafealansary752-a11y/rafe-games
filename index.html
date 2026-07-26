@@ -4,152 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موقع RAF للمحاكيات والتعاريف</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { 
-            background-color: #0b0f19; 
-            color: #f3f4f6; 
-            font-family: system-ui, -apple-system, sans-serif;
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --card-hover: #1f2937;
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --border-color: #374151;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #a78bfa;
+        }
+        header p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e5e7eb;
+            border-right: 4px solid var(--accent);
+            padding-right: 10px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #2563eb;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background-color: #374151;
+        }
+        .btn-secondary:hover {
+            background-color: #4b5563;
+        }
+        .item-desc {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 20px;
+            width: 100%;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between p-6">
+<body>
 
-    <!-- الهيدر -->
-    <header class="w-full max-w-4xl mx-auto text-center py-8">
-        <h1 class="text-3xl md:text-4xl font-extrabold text-indigo-400 mb-2">🎮 موقع RAF للمحاكيات والتعاريف</h1>
-        <p class="text-gray-400 text-sm">منصتك الموثوقة لأفضل المحاكيات، تعاريف الأداء (Turnip)، ومواقع الألعاب النظيفة • بدون إعلانات نهائياً</p>
-    </header>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>موقع RAF للمحاكيات والتعاريف 🎮</h1>
+            <p>منصتك الموثوقة لأفضل المحاكيات، تعاريف الأداء (Turnip)، ملفات الفيرموير والمفاتيح، ومواقع الألعاب النظيفة • بدون إعلانات نهائياً</p>
+        </header>
 
-    <!-- المحتوى الرئيسي -->
-    <main class="w-full max-w-4xl mx-auto space-y-6">
-        
-        <!-- روابط التليجرام في الأعلى -->
-        <section class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-xl text-center">
-            <h2 class="text-xl font-bold mb-4 text-indigo-300">💬 مجتمع وتليجرام RAF</h2>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://t.me/RAF2007mmaaggq" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white py-2.5 px-6 rounded-xl text-sm font-medium transition">قروب الشات</a>
-                <a href="https://t.me/hdjsqn" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white py-2.5 px-6 rounded-xl text-sm font-medium transition">قروب الاخبار</a>
+        <!-- Telegram Community Card -->
+        <div class="card">
+            <div class="card-title">مجتمع وتليجرام RAF 💬</div>
+            <div class="btn-group">
+                <a href="https://t.me/RAF2007mmaaggq" target="_blank" class="btn">قروب الشات</a>
+                <a href="https://t.me/hdjsqn" target="_blank" class="btn btn-secondary">قروب الاخبار</a>
             </div>
-        </section>
+        </div>
 
-        <!-- قسم منصة GameHub و Winlator -->
-        <section class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-xl">
-            <h2 class="text-xl font-bold mb-4 text-indigo-300 border-r-4 border-indigo-500 pr-3">🚀 منصة ألعاب الكمبيوتر (GameHub & Winlator)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-lg text-white">GameHub</h3>
-                        <p class="text-gray-400 text-xs mt-1">منصة متكاملة لتشغيل وإدارة الألعاب والمحاكيات.</p>
-                    </div>
-                    <a href="https://ankergames.net/" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-sm font-medium transition">تحميل GameHub / زيارة الموقع</a>
+        <!-- Emulators & Files Card -->
+        <div class="card">
+            <div class="card-title">محاكيات وملفات التشغيل 🚀</div>
+            <div class="btn-group">
+                <div>
+                    <div class="item-desc">محاكي Eden للأندرويد (الإصدار المحدث)</div>
+                    <a href="https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-optimized.apk" target="_blank" class="btn">تحميل محاكي Eden v0.2.1</a>
                 </div>
-
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-lg text-white">Winlator</h3>
-                        <p class="text-gray-400 text-xs mt-1">محاكي ويندوز لتشغيل ألعاب الكمبيوتر على الأندرويد.</p>
-                    </div>
-                    <a href="https://github.com/winlator/winlator/releases" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-sm font-medium transition">تحميل محاكي Winlator</a>
+                <div>
+                    <div class="item-desc">ملفات الفيرموير الخاصة بالمحاكي</div>
+                    <a href="https://github.com/THZoria/NX_Firmware/releases/download/22.5.0/Firmware.22.5.0.zip" target="_blank" class="btn btn-secondary">تحميل الفيرموير (Firmware v22.5.0)</a>
                 </div>
-
+                <div>
+                    <div class="item-desc">ملفات مفاتيح التشغيل للمحاكي</div>
+                    <a href="https://prodkeys.io/wp-content/uploads/2026/07/ProdKeys.-v22.5.0.zip" target="_blank" class="btn btn-secondary">تحميل Prod Keys v22.5.0</a>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- قسم محاكيات الكونسول والمحمولة -->
-        <section class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-xl">
-            <h2 class="text-xl font-bold mb-4 text-indigo-300 border-r-4 border-indigo-500 pr-3">🕹️ محاكيات المنصات الأخرى</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-white">PPSSPP (PSP)</h3>
-                        <p class="text-gray-400 text-xs mt-1">محاكي PSP الأسطوري.</p>
-                    </div>
-                    <a href="https://github.com/hrydgard/ppsspp/releases" target="_blank" class="mt-3 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-1.5 rounded-lg text-xs transition">تحميل PPSSPP</a>
-                </div>
-
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-white">Vita3K (PS Vita)</h3>
-                        <p class="text-gray-400 text-xs mt-1">محاكي PS Vita لأندرويد.</p>
-                    </div>
-                    <a href="https://github.com/Vita3K/Vita3K-Android/releases" target="_blank" class="mt-3 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-1.5 rounded-lg text-xs transition">تحميل Vita3K</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- قسم تعاريف الأداء GPU Turnip Drivers -->
-        <section class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-xl">
-            <h2 class="text-xl font-bold mb-4 text-indigo-300 border-r-4 border-indigo-500 pr-3">⚡ تعاريف الرسوميات (Turnip GPU Drivers) لمعالجات Snapdragon</h2>
-            <p class="text-gray-400 text-xs mb-4">تعاريف مخصصة لتحسين الأداء ورفع الإطارات (FPS) لمعالجات سناب دراجون (فئة 870 فما فوق).</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-base text-white">Turnip Driver (الإصدارات المستقرة)</h3>
-                        <p class="text-gray-400 text-xs mt-1">مناسب لمعالجات: Snapdragon 870, 888, 8 Gen 1, 8 Gen 2</p>
-                    </div>
-                    <a href="https://github.com/K11MCH1/AdrenoToolsDrivers/releases" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-500 text-white text-center py-2 rounded-lg text-xs font-medium transition">تحميل التعاريف (K11MCH1 Releases)</a>
-                </div>
-
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-base text-white">Turnip Driver (أحدث إصدارات التجريبية و Gen 3)</h3>
-                        <p class="text-gray-400 text-xs mt-1">مناسب لمعالجات: Snapdragon 8 Gen 3, 8s Gen 3, والمعالجات الحديثة</p>
-                    </div>
-                    <a href="https://github.com/K11MCH1/AdrenoToolsDrivers/releases" target="_blank" class="mt-4 bg-emerald-600 hover:bg-emerald-500 text-white text-center py-2 rounded-lg text-xs font-medium transition">تصفح أحدث التعاريف الشاملة</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- قسم مواقع تحميل الألعاب -->
-        <section class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-xl">
-            <h2 class="text-xl font-bold mb-4 text-indigo-300 border-r-4 border-indigo-500 pr-3">📦 مكتبات ومواقع تحميل الألعاب (مجانية وبدون إعلانات)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                
-                <!-- PPSSPP Games -->
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-white">ألعاب PSP (PPSSPP)</h3>
-                        <p class="text-gray-400 text-xs mt-1">موقع موثوق لتحميل ملفات ISO الخاصة بألعاب PSP مباشرة.</p>
-                    </div>
-                    <a href="https://cdromance.com/psp-iso/" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-xs font-medium transition">تصفح ألعاب PSP (CDRomance)</a>
-                </div>
-
-                <!-- Vita3K Games (NoPayStation) -->
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-white">ألعاب PS Vita (Vita3K)</h3>
-                        <p class="text-gray-400 text-xs mt-1">موقع NoPayStation للبحث عن ألعاب PS Vita وتنزيلها.</p>
-                    </div>
-                    <a href="https://nopaystation.com/search?query=&platform=psv&limit=10&orderBy=completionDate&sort=DESC" target="_blank" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2 rounded-lg text-xs font-medium transition">تصفح ألعاب PS Vita (NoPayStation)</a>
-                </div>
-
-                <!-- PC Games (AnkerGames & SteamRip) -->
-                <div class="bg-gray-800/80 p-4 rounded-xl border border-gray-700 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-white">ألعاب PC</h3>
-                        <p class="text-gray-400 text-xs mt-1">مواقع ألعاب الكمبيوتر (AnkerGames و SteamRip).</p>
-                    </div>
-                    <div class="mt-4 flex flex-col gap-2">
-                        <a href="https://ankergames.net/" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white text-center py-1.5 rounded-lg text-xs font-medium transition">موقع AnkerGames</a>
-                        <a href="https://steamrip.com/" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white text-center py-1.5 rounded-lg text-xs font-medium transition">موقع SteamRip</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- الفوتر -->
-    <footer class="text-center text-gray-500 text-xs py-6">
-        صُنع خصيصاً لراحة المستخدمين • موقع RAF للمحاكيات والتعاريف خالي تماماً من الإعلانات 🛡️
-    </footer>
+    <div class="footer">
+        جميع الحقوق محفوظة © RAF • إصدار الموقع: RAF1.1
+    </div>
 
 </body>
 </html>
