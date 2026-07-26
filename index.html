@@ -97,10 +97,23 @@
         .btn-secondary:hover {
             background-color: #4b5563;
         }
+        .item-box {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        .item-title {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: #f3f4f6;
+            margin-bottom: 5px;
+        }
         .item-desc {
             font-size: 0.85rem;
             color: var(--text-sub);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         .footer {
             text-align: center;
@@ -131,21 +144,41 @@
             </div>
         </div>
 
-        <!-- Emulators & Files Card -->
+        <!-- PC Games & Emulators Card (GameHub & Winlator) -->
         <div class="card">
-            <div class="card-title">محاكيات وملفات التشغيل 🚀</div>
+            <div class="card-title">منصة ألعاب الكمبيوتر 🚀 (GameHub & Winlator)</div>
             <div class="btn-group">
-                <div>
-                    <div class="item-desc">محاكي Eden للأندرويد (الإصدار المحدث)</div>
+                <div class="item-box">
+                    <div class="item-title">GameHub</div>
+                    <div class="item-desc">منصة متكاملة لتشغيل وإدارة الألعاب والمحاكيات.</div>
+                    <a href="#" target="_blank" class="btn btn-secondary">تحميل GameHub / زيارة الموقع</a>
+                </div>
+                <div class="item-box">
+                    <div class="item-title">Winlator</div>
+                    <div class="item-desc">تشغيل ألعاب ويندوز على نظام أندرويد بكل كفاءة.</div>
+                    <a href="#" target="_blank" class="btn btn-secondary">تحميل Winlator</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Switch/Eden & Files Card -->
+        <div class="card">
+            <div class="card-title">محاكيات وملفات التشغيل الحديثة ⚡</div>
+            <div class="btn-group">
+                <div class="item-box">
+                    <div class="item-title">محاكي Eden</div>
+                    <div class="item-desc">محاكي Eden للأندرويد (الإصدار المحدث محسن الأداء)</div>
                     <a href="https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-optimized.apk" target="_blank" class="btn">تحميل محاكي Eden v0.2.1</a>
                 </div>
-                <div>
+                <div class="item-box">
+                    <div class="item-title">ملفات الفيرموير (Firmware)</div>
                     <div class="item-desc">ملفات الفيرموير الخاصة بالمحاكي</div>
-                    <a href="https://github.com/THZoria/NX_Firmware/releases/download/22.5.0/Firmware.22.5.0.zip" target="_blank" class="btn btn-secondary">تحميل الفيرموير (Firmware v22.5.0)</a>
+                    <a href="https://github.com/THZoria/NX_Firmware/releases/download/22.5.0/Firmware.22.5.0.zip" target="_blank" class="btn btn-secondary">تحميل الفيرموير (v22.5.0)</a>
                 </div>
-                <div>
-                    <div class="item-desc">ملفات مفاتيح التشغيل للمحاكي</div>
-                    <a href="https://prodkeys.io/wp-content/uploads/2026/07/ProdKeys.-v22.5.0.zip" target="_blank" class="btn btn-secondary">تحميل Prod Keys v22.5.0</a>
+                <div class="item-box">
+                    <div class="item-title">مفاتيح التشغيل (Prod Keys)</div>
+                    <div class="item-desc">ملفات مفاتيح التشغيل الضرورية للمحاكي</div>
+                    <a href="https://prodkeys.io/wp-content/uploads/2026/07/ProdKeys.-v22.5.0.zip" target="_blank" class="btn btn-secondary">تحميل Prod Keys (v22.5.0)</a>
                 </div>
             </div>
         </div>
