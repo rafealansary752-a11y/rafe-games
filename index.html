@@ -13,19 +13,18 @@
             min-height: 100vh;
         }
         .glass-card {
-            background: rgba(17, 24, 39, 0.75);
+            background: rgba(17, 24, 39, 0.85);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(55, 65, 81, 0.5);
+            border: 1px solid rgba(55, 65, 81, 0.6);
         }
-        /* حركة انسيابية للقوائم */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transition: max-height 0.35s ease-in-out, opacity 0.35s ease-in-out;
             opacity: 0;
         }
         .accordion-content.active {
-            max-height: 1000px;
+            max-height: 1200px;
             opacity: 1;
         }
         .rotate-icon {
@@ -41,7 +40,7 @@
     <!-- الهيدر -->
     <header class="w-full max-w-4xl mx-auto text-center py-6 sm:py-8">
         <div class="inline-block bg-indigo-500/10 border border-indigo-500/20 px-4 py-1.5 rounded-full text-indigo-400 text-xs font-semibold mb-3">
-            منصة المحاكيات الاحترافية • إصدار القوائم السلسة
+            منصة المحاكيات الاحترافية • إصدار القوائم المطورة
         </div>
         <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-wide mb-2">
             🎮 موقع RAF للمحاكيات والتعاريف
@@ -51,19 +50,20 @@
         </p>
     </header>
 
-    <!-- المحتوى الرئيسي (قوائم منسدلة) -->
+    <!-- المحتوى الرئيسي -->
     <main class="w-full max-w-4xl mx-auto space-y-4">
         
         <!-- قائمة التليجرام -->
-        <section class="glass-card rounded-2xl shadow-2xl overflow-hidden transition">
-            <button onclick="toggleAccordion('sec-telegram', this)" class="w-full p-5 text-right flex justify-between items-center focus:outline-none">
-                <h2 class="text-base sm:text-lg font-bold text-indigo-300 flex items-center gap-2">
-                    <span>💬</span> مجتمع وتليجرام RAF
-                </h2>
-                <span class="rotate-icon text-indigo-400 text-xl font-bold">▼</span>
+        <section class="glass-card rounded-2xl shadow-xl overflow-hidden transition">
+            <button onclick="toggleAccordion('sec-telegram', this)" class="w-full p-4 sm:p-5 flex justify-between items-center focus:outline-none">
+                <div class="flex items-center gap-3 text-right">
+                    <span class="text-xl">💬</span>
+                    <h2 class="text-sm sm:text-base font-bold text-indigo-300">مجتمع وتليجرام RAF</h2>
+                </div>
+                <span class="rotate-icon text-indigo-400 text-sm font-bold">▼</span>
             </button>
-            <div id="sec-telegram" class="accordion-content px-5 pb-5">
-                <div class="flex flex-col sm:flex-row justify-center gap-3 pt-2 border-t border-gray-800">
+            <div id="sec-telegram" class="accordion-content px-4 sm:px-5 pb-5 pt-2 border-t border-gray-800">
+                <div class="flex flex-col sm:flex-row justify-center gap-3 pt-2">
                     <a href="https://t.me/RAF2007mmaaggq" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white py-2.5 px-6 rounded-xl text-sm font-semibold text-center transition shadow-lg">قروب الشات</a>
                     <a href="https://t.me/hdjsqn" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white py-2.5 px-6 rounded-xl text-sm font-semibold text-center transition shadow-lg">قروب الاخبار</a>
                 </div>
@@ -71,15 +71,16 @@
         </section>
 
         <!-- قائمة ألعاب الكمبيوتر -->
-        <section class="glass-card rounded-2xl shadow-2xl overflow-hidden transition">
-            <button onclick="toggleAccordion('sec-pc', this)" class="w-full p-5 text-right flex justify-between items-center focus:outline-none">
-                <h2 class="text-base sm:text-lg font-bold text-indigo-300 flex items-center gap-2">
-                    <span>🚀</span> منصة ألعاب الكمبيوتر (GameHub & Winlator)
-                </h2>
-                <span class="rotate-icon text-indigo-400 text-xl font-bold">▼</span>
+        <section class="glass-card rounded-2xl shadow-xl overflow-hidden transition">
+            <button onclick="toggleAccordion('sec-pc', this)" class="w-full p-4 sm:p-5 flex justify-between items-center focus:outline-none">
+                <div class="flex items-center gap-3 text-right">
+                    <span class="text-xl">🚀</span>
+                    <h2 class="text-sm sm:text-base font-bold text-indigo-300">منصة ألعاب الكمبيوتر (GameHub & Winlator)</h2>
+                </div>
+                <span class="rotate-icon text-indigo-400 text-sm font-bold">▼</span>
             </button>
-            <div id="sec-pc" class="accordion-content px-5 pb-5 pt-2 border-t border-gray-800">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div id="sec-pc" class="accordion-content px-4 sm:px-5 pb-5 pt-2 border-t border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                     <div class="bg-gray-800/60 p-4 rounded-xl border border-gray-700/60 flex flex-col justify-between">
                         <div>
                             <h3 class="font-bold text-base text-white">GameHub</h3>
@@ -99,15 +100,16 @@
         </section>
 
         <!-- قائمة المحاكيات الأخرى و Eden -->
-        <section class="glass-card rounded-2xl shadow-2xl overflow-hidden transition">
-            <button onclick="toggleAccordion('sec-emulators', this)" class="w-full p-5 text-right flex justify-between items-center focus:outline-none">
-                <h2 class="text-base sm:text-lg font-bold text-indigo-300 flex items-center gap-2">
-                    <span>🕹️</span> محاكيات المنصات الأخرى وملفات التشغيل
-                </h2>
-                <span class="rotate-icon text-indigo-400 text-xl font-bold">▼</span>
+        <section class="glass-card rounded-2xl shadow-xl overflow-hidden transition">
+            <button onclick="toggleAccordion('sec-emulators', this)" class="w-full p-4 sm:p-5 flex justify-between items-center focus:outline-none">
+                <div class="flex items-center gap-3 text-right">
+                    <span class="text-xl">🕹️</span>
+                    <h2 class="text-sm sm:text-base font-bold text-indigo-300">محاكيات المنصات الأخرى وملفات التشغيل</h2>
+                </div>
+                <span class="rotate-icon text-indigo-400 text-sm font-bold">▼</span>
             </button>
-            <div id="sec-emulators" class="accordion-content px-5 pb-5 pt-2 border-t border-gray-800">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div id="sec-emulators" class="accordion-content px-4 sm:px-5 pb-5 pt-2 border-t border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                     <div class="bg-gray-800/60 p-4 rounded-xl border border-gray-700/60 flex flex-col justify-between">
                         <div>
                             <h3 class="font-bold text-sm text-white">PPSSPP (PSP)</h3>
@@ -139,15 +141,16 @@
         </section>
 
         <!-- قائمة تعاريف الأداء -->
-        <section class="glass-card rounded-2xl shadow-2xl overflow-hidden transition">
-            <button onclick="toggleAccordion('sec-drivers', this)" class="w-full p-5 text-right flex justify-between items-center focus:outline-none">
-                <h2 class="text-base sm:text-lg font-bold text-indigo-300 flex items-center gap-2">
-                    <span>⚡</span> تعاريف الرسوميات (Turnip GPU Drivers)
-                </h2>
-                <span class="rotate-icon text-indigo-400 text-xl font-bold">▼</span>
+        <section class="glass-card rounded-2xl shadow-xl overflow-hidden transition">
+            <button onclick="toggleAccordion('sec-drivers', this)" class="w-full p-4 sm:p-5 flex justify-between items-center focus:outline-none">
+                <div class="flex items-center gap-3 text-right">
+                    <span class="text-xl">⚡</span>
+                    <h2 class="text-sm sm:text-base font-bold text-indigo-300">تعاريف الرسوميات (Turnip GPU Drivers)</h2>
+                </div>
+                <span class="rotate-icon text-indigo-400 text-sm font-bold">▼</span>
             </button>
-            <div id="sec-drivers" class="accordion-content px-5 pb-5 pt-2 border-t border-gray-800">
-                <p class="text-gray-400 text-xs mb-4">تعاريف مخصصة لتحسين الأداء ورفع الإطارات (FPS) لمعالجات سناب دراجون.</p>
+            <div id="sec-drivers" class="accordion-content px-4 sm:px-5 pb-5 pt-2 border-t border-gray-800">
+                <p class="text-gray-400 text-xs mb-4 pt-2">تعاريف مخصصة لتحسين الأداء ورفع الإطارات (FPS) لمعالجات سناب دراجون.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-gray-800/60 p-4 rounded-xl border border-gray-700/60 flex flex-col justify-between">
                         <div>
@@ -168,15 +171,16 @@
         </section>
 
         <!-- قائمة مواقع تحميل الألعاب -->
-        <section class="glass-card rounded-2xl shadow-2xl overflow-hidden transition">
-            <button onclick="toggleAccordion('sec-games', this)" class="w-full p-5 text-right flex justify-between items-center focus:outline-none">
-                <h2 class="text-base sm:text-lg font-bold text-indigo-300 flex items-center gap-2">
-                    <span>📦</span> مكتبات ومواقع تحميل الألعاب
-                </h2>
-                <span class="rotate-icon text-indigo-400 text-xl font-bold">▼</span>
+        <section class="glass-card rounded-2xl shadow-xl overflow-hidden transition">
+            <button onclick="toggleAccordion('sec-games', this)" class="w-full p-4 sm:p-5 flex justify-between items-center focus:outline-none">
+                <div class="flex items-center gap-3 text-right">
+                    <span class="text-xl">📦</span>
+                    <h2 class="text-sm sm:text-base font-bold text-indigo-300">مكتبات ومواقع تحميل الألعاب</h2>
+                </div>
+                <span class="rotate-icon text-indigo-400 text-sm font-bold">▼</span>
             </button>
-            <div id="sec-games" class="accordion-content px-5 pb-5 pt-2 border-t border-gray-800">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div id="sec-games" class="accordion-content px-4 sm:px-5 pb-5 pt-2 border-t border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
                     <div class="bg-gray-800/60 p-4 rounded-xl border border-gray-700/60 flex flex-col justify-between">
                         <div>
                             <h3 class="font-bold text-sm text-white">ألعاب PSP (PPSSPP)</h3>
@@ -209,21 +213,18 @@
 
     <!-- الفوتر -->
     <footer class="text-center text-gray-500 text-xs py-8 border-t border-gray-800/60 mt-8">
-        صُنع خصيصاً لراحة المستخدمين • موقع RAF للمحاكيات والتعاريف خالي تماماً من الإعلانات 🛡️ • إصدار القوائم
+        صُنع خصيصاً لراحة المستخدمين • موقع RAF للمحاكيات والتعاريف خالي تماماً من الإعلانات 🛡️
     </footer>
 
-    <!-- سكربت لفتح وإغلاق القوائم بسلاسة -->
+    <!-- سكربت التحكم بالقوائم -->
     <script>
         function toggleAccordion(id, btn) {
             const content = document.getElementById(id);
-            const isOpen = content.classList.contains('active');
-            
-            // إغلاق الكل أولاً إذا أردت (اختياري)، أو تركها مستقلة. سنتركها مستقلة لراحة التصفح.
             content.classList.toggle('active');
             btn.classList.toggle('active-rotate');
         }
 
-        // فتح أول قائمة تلقائياً عند دخول الموقع لتكون واضحة للمستخدم
+        // فتح أول قائمة تلقائياً عند الدخول
         document.addEventListener("DOMContentLoaded", () => {
             const firstBtn = document.querySelector("main section button");
             if(firstBtn) firstBtn.click();
