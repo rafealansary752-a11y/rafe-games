@@ -3,151 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAF OFFICIAL | منصة المحاكيات والألعاب</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>روابط و منصات رافع | RAF</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
         body {
-            font-family: 'Cairo', sans-serif;
-            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #090d16 60%, #020617 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
         }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(129, 140, 248, 0.15);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 5px;
+            font-size: 26px;
+            color: #38bdf8;
+        }
+        p.subtitle {
+            color: #94a3b8;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        .section-title {
+            text-align: right;
+            font-size: 16px;
+            color: #cbd5e1;
+            margin: 20px 0 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+        }
+        .link-button {
+            display: block;
+            background: rgba(56, 189, 248, 0.1);
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
             transition: all 0.3s ease;
+            font-weight: 600;
         }
-        .glass-card:hover {
-            border-color: rgba(129, 140, 248, 0.4);
+        .link-button:hover {
+            background: #38bdf8;
+            color: #0f172a;
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
         }
-        .btn-glow {
-            transition: all 0.25s ease;
-        }
-        .btn-glow:hover {
-            filter: brightness(1.15);
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
-        }
-        .gradient-title {
-            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #64748b;
         }
     </style>
 </head>
-<body class="p-4 sm:p-6 md:p-10 flex flex-col justify-between">
+<body>
 
-    <!-- الهيدر الاحترافي الجديد -->
-    <header class="max-w-4xl mx-auto text-center mb-10">
-        <div class="inline-block bg-indigo-500/10 border border-indigo-500/30 px-4 py-1.5 rounded-full text-indigo-300 text-xs font-bold mb-3 shadow-inner">
-            ⚡ المنصة الرسمية المعتمدة • خالية من الإعلانات
+    <div class="container">
+        <h1>رافع | RAF</h1>
+        <p class="subtitle">منصتي الشاملة للألعاب، المحاكيات، والمحتوى التقني</p>
+
+        <!-- قسم الألعاب والمحاكيات -->
+        <div class="section-title">🎮 الألعاب والمحاكيات</div>
+        <a href="https://aethersx2.en.divxland.org/" target="_blank" class="link-button">تحميل محاكي AetherSX2</a>
+        <a href="https://romsfun.com/roms/playstation-2/?q=GOD+OF+WAR" target="_blank" class="link-button">تحميل ألعاب PS2 (God of War)</a>
+
+        <!-- قسم التواصل والمنصات -->
+        <div class="section-title">🌐 منصات التواصل والمحتوى</div>
+        <a href="https://github.com/rafealansary752-a11y/rafe-games" target="_blank" class="link-button">موقع GitHub Pages</a>
+        <a href="https://creators.sa/raf1111" target="_blank" class="link-button">صفحة Creators SA الرئيسية</a>
+
+        <div class="footer">
+            جميع الحقوق محفوظة © 2026 jiuvley
         </div>
-        <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-3 gradient-title">
-            RAF OFFICIAL
-        </h1>
-        <p class="text-slate-400 text-xs sm:text-sm max-w-lg mx-auto leading-relaxed">
-            مرجعك الاحترافي الشامل للمحاكيات، تعاريف الأداء المتطورة، وأضخم مكتبات ألعاب الـ PC المباشرة.
-        </p>
-    </header>
-
-    <!-- المحتوى بتصميم بطاقات مرتبة وجميلة -->
-    <main class="max-w-4xl mx-auto w-full space-y-6">
-        
-        <!-- قسم التليجرام -->
-        <section class="glass-card rounded-3xl p-5 sm:p-6">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl p-2.5 bg-sky-500/10 rounded-2xl text-sky-400">💬</span>
-                <h2 class="text-base sm:text-lg font-bold text-white">مجتمع وتليجرام RAF</h2>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <a href="https://t.me/RAF2007mmaaggq" target="_blank" class="btn-glow bg-gradient-to-r from-sky-600 to-blue-600 text-white py-3 px-4 rounded-2xl text-xs sm:text-sm font-bold text-center shadow-lg">قروب الشات الرئيسي</a>
-                <a href="https://t.me/hdjsqn" target="_blank" class="btn-glow bg-gradient-to-r from-sky-600 to-blue-600 text-white py-3 px-4 rounded-2xl text-xs sm:text-sm font-bold text-center shadow-lg">قروب الأخبار والتحديثات</a>
-            </div>
-        </section>
-
-        <!-- قسم ألعاب الكمبيوتر (GameHub & Winlator) -->
-        <section class="glass-card rounded-3xl p-5 sm:p-6">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl p-2.5 bg-indigo-500/10 rounded-2xl text-indigo-400">🚀</span>
-                <h2 class="text-base sm:text-lg font-bold text-white">منصة ألعاب الكمبيوتر (GameHub & Winlator)</h2>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-indigo-300">GameHub</h3>
-                        <p class="text-slate-400 text-xs mt-1">جيم هب - عالمك للألعاب وتشغيل المحاكيات.</p>
-                    </div>
-                    <a href="https://share.google/8b7r1ZP9iyHse5kHV" target="_blank" class="btn-glow mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2.5 rounded-xl text-xs font-bold transition">تحميل GameHub</a>
-                </div>
-                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-sm text-indigo-300">Winlator</h3>
-                        <p class="text-slate-400 text-xs mt-1">محاكي ويندوز لتشغيل ألعاب PC على أندرويد.</p>
-                    </div>
-                    <a href="https://github.com/brunodev85/winlator/releases" target="_blank" class="btn-glow mt-4 bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2.5 rounded-xl text-xs font-bold transition">تحميل محاكي Winlator</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم المحاكيات وملفات التشغيل -->
-        <section class="glass-card rounded-3xl p-5 sm:p-6">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl p-2.5 bg-emerald-500/10 rounded-2xl text-emerald-400">🕹️</span>
-                <h2 class="text-base sm:text-lg font-bold text-white">المحاكيات وملفات التشغيل الأساسية</h2>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-                <a href="https://github.com/hrydgard/ppsspp/releases" target="_blank" class="bg-slate-900/60 hover:bg-slate-800/80 p-3.5 rounded-2xl border border-slate-800 text-xs font-bold text-slate-200 text-center transition">محاكي PPSSPP (PSP)</a>
-                <a href="https://github.com/Vita3K/Vita3K-Android/releases" target="_blank" class="bg-slate-900/60 hover:bg-slate-800/80 p-3.5 rounded-2xl border border-slate-800 text-xs font-bold text-slate-200 text-center transition">محاكي Vita3K (PS Vita)</a>
-            </div>
-            <!-- محاكي Eden وملحقاته -->
-            <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
-                <h3 class="font-bold text-sm text-indigo-300 mb-2">محاكي Eden وملحقاته الكاملة</h3>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    <a href="https://stable.eden-emu.dev/v0.2.1/Eden-Android-v0.2.1-optimized.apk" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white text-center py-2.5 px-2 rounded-xl text-xs font-bold transition">تحميل Eden</a>
-                    <a href="https://github.com/THZoria/NX_Firmware/releases/download/22.5.0/Firmware.22.5.0.zip" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-center py-2.5 px-2 rounded-xl text-xs font-semibold transition">الفيرموير</a>
-                    <a href="https://prodkeys.io/wp-content/uploads/2026/07/ProdKeys.-v22.5.0.zip" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-center py-2.5 px-2 rounded-xl text-xs font-semibold transition">Prod Keys</a>
-                    <a href="https://romslab.com/category/switch-games/" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-center py-2.5 px-2 rounded-xl text-xs font-bold transition">ألعاب Eden</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم تعاريف الرسوميات -->
-        <section class="glass-card rounded-3xl p-5 sm:p-6">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl p-2.5 bg-amber-500/10 rounded-2xl text-amber-400">⚡</span>
-                <h2 class="text-base sm:text-lg font-bold text-white">تعاريف الرسوميات (Turnip GPU Drivers)</h2>
-            </div>
-            <a href="https://github.com/K11MCH1/AdrenoToolsDrivers/releases" target="_blank" class="btn-glow block bg-gradient-to-r from-amber-600 to-orange-600 text-white p-3.5 rounded-2xl text-xs sm:text-sm font-bold text-center shadow-lg">تصفح وتحميل أحدث تعاريف Turnip لمعالجات سناب دراجون</a>
-        </section>
-
-        <!-- قسم مكتبات ألعاب الـ PC المباشرة -->
-        <section class="glass-card rounded-3xl p-5 sm:p-6">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="text-2xl p-2.5 bg-purple-500/10 rounded-2xl text-purple-400">📦</span>
-                <h2 class="text-base sm:text-lg font-bold text-white">مكتبات ومواقع تحميل ألعاب الكمبيوتر</h2>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                <a href="https://repack-games.com/gta-5-free-download-vi512/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">Repack Games</a>
-                <a href="https://steamunlocked.net/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">SteamUnlocked</a>
-                <a href="https://elamigosedition.com/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">ElAmigos</a>
-                <a href="https://steamrip.com/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">SteamRip</a>
-                <a href="https://steamgg.net/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">SteamGG</a>
-                <a href="https://gamedrive.org/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">GameDrive</a>
-                <a href="https://www.skidrowreloaded.com/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">Skidrow Reloaded</a>
-                <a href="https://ankergames.net/" target="_blank" class="bg-slate-900/80 hover:bg-indigo-950 p-3 rounded-xl border border-slate-800 text-center text-xs font-bold text-indigo-300 transition">AnkerGames</a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- الفوتر -->
-    <footer class="max-w-4xl mx-auto text-center text-slate-500 text-xs py-8 mt-10 border-t border-slate-800/50 space-y-2">
-        <p>منصة RAF المحترفة للألعاب والمحاكيات • خالية تماماً من الإعلانات 🛡️</p>
-        <p class="text-indigo-400 font-mono font-bold">Version: v5.0-ULTIMATE</p>
-    </footer>
+    </div>
 
 </body>
 </html>
