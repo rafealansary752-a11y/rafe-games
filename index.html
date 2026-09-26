@@ -5,86 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>روابط و منصات رافع | RAF</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #f8fafc;
-            margin: 0;
-            padding: 20px;
+            background: linear-gradient(135deg, #090d16, #1a2238);
+            color: #f1f5f9;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            padding: 20px;
         }
-        .container {
+        .profile-card {
             width: 100%;
-            max-width: 500px;
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 480px;
+            background: rgba(26, 34, 56, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 35px 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
             text-align: center;
         }
+        .avatar-placeholder {
+            width: 85px;
+            height: 85px;
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+        }
         h1 {
+            font-size: 24px;
+            color: #f8fafc;
             margin-bottom: 5px;
-            font-size: 26px;
+        }
+        p.handle {
             color: #38bdf8;
-        }
-        p.subtitle {
-            color: #94a3b8;
-            margin-bottom: 25px;
             font-size: 14px;
-        }
-        .section-title {
-            text-align: right;
-            font-size: 16px;
-            color: #cbd5e1;
-            margin: 20px 0 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 5px;
-        }
-        .link-button {
-            display: block;
-            background: rgba(56, 189, 248, 0.1);
-            color: #e2e8f0;
-            text-decoration: none;
-            padding: 12px 20px;
-            margin: 10px 0;
-            border-radius: 12px;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            transition: all 0.3s ease;
+            margin-bottom: 25px;
             font-weight: 600;
         }
-        .link-button:hover {
-            background: #38bdf8;
-            color: #0f172a;
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.04);
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .link-item:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            color: #38bdf8;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.2);
         }
         .footer {
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 12px;
             color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="profile-card">
+        <div class="avatar-placeholder">R</div>
         <h1>رافع | RAF</h1>
-        <p class="subtitle">منصتي الشاملة للألعاب، المحاكيات، والمحتوى التقني</p>
+        <p class="handle">@jiuvley</p>
 
-        <!-- قسم الألعاب والمحاكيات -->
-        <div class="section-title">🎮 الألعاب والمحاكيات</div>
-        <a href="https://aethersx2.en.divxland.org/" target="_blank" class="link-button">تحميل محاكي AetherSX2</a>
-        <a href="https://romsfun.com/roms/playstation-2/?q=GOD+OF+WAR" target="_blank" class="link-button">تحميل ألعاب PS2 (God of War)</a>
+        <div class="links-container">
+            <!-- الروابط الجديدة المضافة -->
+            <a href="https://romsfun.com/roms/playstation-2/?q=GOD+OF+WAR" target="_blank" class="link-item">🎮 موقع ألعاب PS2</a>
+            <a href="https://aethersx2.en.divxland.org/" target="_blank" class="link-item">⚡ تحميل محاكي AetherSX2</a>
 
-        <!-- قسم التواصل والمنصات -->
-        <div class="section-title">🌐 منصات التواصل والمحتوى</div>
-        <a href="https://github.com/rafealansary752-a11y/rafe-games" target="_blank" class="link-button">موقع GitHub Pages</a>
-        <a href="https://creators.sa/raf1111" target="_blank" class="link-button">صفحة Creators SA الرئيسية</a>
+            <!-- الروابط السابقة بالكامل بدون أي نقص -->
+            <a href="https://github.com/rafealansary752-a11y/rafe-games" target="_blank" class="link-item">💻 موقع GitHub Pages</a>
+            <a href="https://creators.sa/raf1111" target="_blank" class="link-item">🚀 صفحة Creators SA</a>
+        </div>
 
         <div class="footer">
             جميع الحقوق محفوظة © 2026 jiuvley
