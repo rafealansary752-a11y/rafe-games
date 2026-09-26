@@ -9,30 +9,31 @@
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
         body {
             font-family: 'Cairo', sans-serif;
-            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #090d16 60%, #020617 100%);
+            background: radial-gradient(circle at 50% 0%, #0f172a 0%, #090d16 50%, #020617 100%);
             color: #f8fafc;
             min-height: 100vh;
         }
         .glass-card {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(129, 140, 248, 0.15);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            border-color: rgba(129, 140, 248, 0.4);
-            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.15);
         }
         .btn-glow {
-            transition: all 0.25s ease;
+            transition: all 0.3s ease;
         }
         .btn-glow:hover {
             filter: brightness(1.15);
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
         }
         .gradient-title {
-            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -42,7 +43,7 @@
 
     <!-- الهيدر الاحترافي -->
     <header class="max-w-4xl mx-auto text-center mb-10">
-        <div class="inline-block bg-indigo-500/10 border border-indigo-500/30 px-4 py-1.5 rounded-full text-indigo-300 text-xs font-bold mb-3 shadow-inner">
+        <div class="inline-block bg-sky-500/10 border border-sky-500/30 px-4 py-1.5 rounded-full text-sky-300 text-xs font-bold mb-3 shadow-inner">
             ⚡ المنصة الرسمية المعتمدة • خالية من الإعلانات
         </div>
         <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-3 gradient-title">
@@ -53,7 +54,7 @@
         </p>
     </header>
 
-    <!-- المحتوى بتصميم بطاقات منظمة وسهلة -->
+    <!-- المحتوى المرتب والمنسق -->
     <main class="max-w-4xl mx-auto w-full space-y-6">
         
         <!-- قسم التليجرام -->
@@ -99,13 +100,26 @@
                 <h2 class="text-base sm:text-lg font-bold text-white">المحاكيات وملفات التشغيل الأساسية</h2>
             </div>
             
-            <!-- المحاكيات العامة -->
+            <!-- محاكيات PSP & Vita3K مع المواقع الجديدة -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
-                <a href="https://github.com/hrydgard/ppsspp/releases" target="_blank" class="bg-slate-900/60 hover:bg-slate-800/80 p-3.5 rounded-2xl border border-slate-800 text-xs font-bold text-slate-200 text-center transition">محاكي PPSSPP (PSP)</a>
-                <a href="https://github.com/Vita3K/Vita3K-Android/releases" target="_blank" class="bg-slate-900/60 hover:bg-slate-800/80 p-3.5 rounded-2xl border border-slate-800 text-xs font-bold text-slate-200 text-center transition">محاكي Vita3K (PS Vita)</a>
+                <div class="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                    <span class="text-xs font-bold text-slate-200 mb-2 text-center">محاكي PPSSPP (PSP)</span>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="https://github.com/hrydgard/ppsspp/releases" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-center py-2 px-1 rounded-xl text-xs font-semibold transition">الإصدارات</a>
+                        <a href="https://www.romsgames.net/roms/playstation-portable/" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white text-center py-2 px-1 rounded-xl text-xs font-bold transition">ألعاب PSP</a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/60 p-3.5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                    <span class="text-xs font-bold text-slate-200 mb-2 text-center">محاكي Vita3K (PS Vita)</span>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="https://github.com/Vita3K/Vita3K-Android/releases" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-center py-2 px-1 rounded-xl text-xs font-semibold transition">الإصدارات</a>
+                        <a href="https://jeiner-gaming.com/ps-vita/" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-center py-2 px-1 rounded-xl text-xs font-bold transition">ألعاب PS Vita</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- محاكي AetherSX2 وموقع ألعاب PS2 (مرتبة بشكل جميل وسهل) -->
+            <!-- AetherSX2 وموقع ألعاب PS2 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                 <a href="https://aethersx2.en.divxland.org/" target="_blank" class="btn-glow bg-gradient-to-r from-teal-600 to-emerald-600 text-white p-3.5 rounded-2xl text-xs font-bold text-center shadow-lg flex items-center justify-center gap-2">
                     <span>⚡</span> تحميل محاكي AetherSX2
@@ -156,10 +170,10 @@
 
     </main>
 
-    <!-- الفوتر مع اسم التحديث -->
+    <!-- الفوتر مع رقم الإصدار المطلوب -->
     <footer class="max-w-4xl mx-auto text-center text-slate-500 text-xs py-8 mt-10 border-t border-slate-800/50 space-y-2">
         <p>منصة RAF المحترفة للألعاب والمحاكيات • خالية تماماً من الإعلانات 🛡️</p>
-        <p class="text-indigo-400 font-mono font-bold">Update Version: v5.1-PRO (PS2 & AetherSX2 Added)</p>
+        <p class="text-sky-400 font-mono font-bold">v5.1-PRO</p>
     </footer>
 
 </body>
